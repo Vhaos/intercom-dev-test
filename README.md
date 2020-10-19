@@ -1,5 +1,6 @@
 # Intercom Take Home Test
 
+[![CircleCI](https://circleci.com/gh/Vhaos/intercom-dev-test.svg?style=shield)](https://circleci.com/gh/Vhaos/intercom-dev-test)
 
 
 ## Install and Run
