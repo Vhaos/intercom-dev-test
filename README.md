@@ -10,6 +10,7 @@ To get things up and running, first you'll need to install Node.js ~v12.X.X, the
 2. Install Dependencies: `npm install`
 3. build TypeScript: `npm run build:tsc`
 4. start app: `npm run start`
+5. run tests: `npm run test`
 
 ## Structure
 
