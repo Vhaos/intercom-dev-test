@@ -34,7 +34,11 @@ export async function inviteCustomers(
  */
 export async function fetchCustomers(path: string): Promise<Customer[]> {
   const text = await readTextFromFile(path);
-  const JSONLines = text.trim().split('\n');
+  const trimmedText = text.trim();
+
+  if (trimmedText.length === 0) return [];
+
+  const JSONLines = trimmedText.split('\n');
   const customerList = parseJSONAndValidateCustomerFields(JSONLines);
   return customerList;
 }
@@ -47,7 +51,7 @@ export async function fetchCustomers(path: string): Promise<Customer[]> {
 function parseJSONAndValidateCustomerFields(stringifiedJSONLines: string[]): Customer[] {
   const customers = stringifiedJSONLines.map((jsonLine) => parseJSONSafely<Customer>(jsonLine));
   if (customers.every(isValidCustomerObject)) return customers;
-  else throw new Error('invalid Customer Data passed in as input!');
+  else throw new Error('invalid customer data passed in as input!');
 }
 
 /**
@@ -78,9 +82,9 @@ function isValidCustomerObject(object: Partial<Customer>): object is Customer {
 
 /**
  * Filters a list of customers and returns customers that are within a certain distance of
- * an origin. 
+ * an origin.
  * @param officeCordinates Origin to calculate distance from
- * @param maxDistance Distance that filtered customers need to be within 
+ * @param maxDistance Distance that filtered customers need to be within
  * @param customers List of customers
  */
 export function filterCustomersByDistance(

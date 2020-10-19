@@ -3,6 +3,9 @@
     "target": "ES2018",
     "module": "commonjs",
     "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "moduleResolution": "node",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -17,7 +20,9 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest", "node"],
+    "resolveJsonModule": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts", "jest.config.js"]

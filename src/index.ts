@@ -11,7 +11,11 @@ const officeCordinates = {
  * Main app entrypoint
  */
 const start = async () => {
-  await inviteCustomers(officeCordinates, invitationRadius);
+  try {
+    await inviteCustomers(officeCordinates, invitationRadius);
+  } catch (error) {
+    console.error(error, 'Fatal error occurred');
+  }
 };
 
 start();

@@ -2,12 +2,12 @@
   "name": "@vhaos/intercom-dev-test",
   "version": "1.0.0",
   "description": "Reads a file of customers, filters it to find nearby customers, then prints the result to an output.txt file",
-  "main": "dist/",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node ./dist ",
     "build:tsc": "tsc -p ./tsconfig.json",
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
-    "test": "jest --runInBand",
+    "test": "jest",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
   "license": "ISC",

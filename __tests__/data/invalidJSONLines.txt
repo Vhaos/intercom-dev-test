@@ -1,0 +1,5 @@
+istina McArdle", "longitude": "-6.043701"}
+{"l"""""""""""""""""""""""""""""""""""user_id": 1, "name": "Alice Cahill", "longitude": "-10.27699"}
+{"latitude": "51.8856167", "user_id": 2, "name": "Ian McArdle", "longitude": "-10.4240951"}
+{"latitude": "52.3191841", "user_
+3.807778", "user_id": 28, "name": "Charlie Halligan", "longitude": "-7.714444"}

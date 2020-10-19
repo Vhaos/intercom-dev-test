@@ -5,10 +5,12 @@ import { promises } from 'fs';
  * @param path Path to the file to read
  */
 export async function readTextFromFile(path: string): Promise<string> {
-  if (!isValidFilePath(path)) throw Error(`can not read file from path ${path}`);
-
-  const fileText = await promises.readFile(path, { encoding: 'utf8', flag: 'r' });
-  return fileText;
+  if (await isValidFilePath(path)){
+    const fileText = await promises.readFile(path, { encoding: 'utf8', flag: 'r' });
+    return fileText;
+  } else {
+    throw new Error(`cannot read/access file`);
+  }
 }
 
 /**
