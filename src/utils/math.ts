@@ -1,7 +1,5 @@
+import env from '../config/env';
 import { Coordinate } from '../typings';
-
-const PI = Math.PI;
-const EARTH_RADIUS_IN_KM = 6371.0088;
 
 /**
  * calculates the distance between to coordinates on the Earth using the Great Circle Formula
@@ -22,7 +20,7 @@ export function getDistanceBetweenCoordinates(pointA: Coordinate, pointB: Coordi
     Math.sin(ɸa) * Math.sin(ɸb) + Math.cos(ɸa) * Math.cos(ɸb) * Math.cos(ƛa - ƛb),
   );
 
-  const distance = EARTH_RADIUS_IN_KM * centralAngle;
+  const distance = env.earthRadiusInKM * centralAngle;
   return distance;
 }
 
@@ -32,5 +30,5 @@ export function getDistanceBetweenCoordinates(pointA: Coordinate, pointB: Coordi
  * @returns corresponding angle in radians
  */
 function degreesToRadians(degrees: number): number {
-  return degrees * (PI / 180);
+  return degrees * (Math.PI / 180);
 }

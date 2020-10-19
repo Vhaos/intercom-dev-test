@@ -7,6 +7,9 @@ const officeCordinates = {
   latitude: env.officeLatitude,
 };
 
+/**
+ * Main app entrypoint
+ */
 const start = async () => {
   await inviteCustomers(officeCordinates, invitationRadius);
 };
