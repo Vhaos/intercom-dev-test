@@ -1,5 +1,5 @@
 /**
- * App configs 
+ * App configs
  */
 const env = {
   officeLatitude: 53.339428,
@@ -8,7 +8,6 @@ const env = {
   earthRadiusInKM: 6371.0088,
   inputFilePath: 'data/customers.txt',
   outputFilePath: 'data/output.txt',
-
 };
 
 export default env;

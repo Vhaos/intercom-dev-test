@@ -8,7 +8,7 @@
     "build:tsc": "tsc -p ./tsconfig.json",
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
     "test": "jest",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "license": "ISC",
   "author": "Kareem Daggash <kareemdaggash@gmail.com>",

@@ -5,7 +5,7 @@ import { promises } from 'fs';
  * @param path Path to the file to read
  */
 export async function readTextFromFile(path: string): Promise<string> {
-  if (await isValidFilePath(path)){
+  if (await isValidFilePath(path)) {
     const fileText = await promises.readFile(path, { encoding: 'utf8', flag: 'r' });
     return fileText;
   } else {
